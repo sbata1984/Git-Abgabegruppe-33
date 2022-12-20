@@ -1,0 +1,196 @@
+
+
+
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{arrows, automata, positioning}
+\usetikzlibrary{positioning,shapes.geometric,calc}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage[german=guillemets]{csquotes}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{listings} 
+\usepackage{color}  
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{fancyhdr}
+\usepackage{subcaption}
+\usepackage{float}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}[theorem]{Definition}
+
+\tikzset{tp/.style = {
+		trapezium,
+		trapezium left angle = 70,
+		trapezium right angle = 110,
+		fill=white,
+		draw = black
+	}
+}
+
+\tikzset{
+	rc/.style = {
+		rectangle,
+		fill=white,
+		draw = black,
+		minimum width = 100pt,
+		minimum height = 20pt
+	}
+}
+
+\tikzset{
+	dm/.style = {
+		diamond,
+		fill=white,
+		draw = black
+	}
+}
+\title{Werkzeuge für das wissenschaftliche Arbeiten \\  {\large Python for Machine Learning and Data Science} } 
+
+\author{ {\large Hicham Harhar, Praderm Nafack Noumedem} }
+
+\date{Abgabe: 23.12.2022}
+
+
+
+\begin{document}
+	
+	\maketitle
+\hrule\hfill\\	
+	
+	\tableofcontents
+\hrule
+
+	
+
+\section{Projektaufgabe}
+	In dieser Aufgabe beschäftigen wir uns mit Objektorientierung in Python. Der
+	Fokus liegt auf der Implementierung einer Klasse, dabei nutzen wir insbesondere
+	auch Magic Methods.
+\begin{figure}[H]
+		\begin{minipage}{\linewidth}
+			\renewcommand{\footnoterule}{}
+			\begin{center}
+				\includegraphics[width=0.75\linewidth]{1.png}.
+			\end{center}
+			\caption[Darstellung der Klassenbeziehungen] {Darstellung der Klassenbeziehungen.}
+		\end{minipage}
+\end{figure}
+\subsection{Einleitung}
+Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein
+Objekt der Klasse "DataSetItem" repräsentiert. Jedes Datum hat einen Namen
+(Zeichenkette), eine ID (Zahl) und bel. Inhalt.\\[0.3cm]
+
+Nun sollen mehrere Daten, Objekte vom Typ "DataSetItem", in einem Daten-
+satz zusammengefasst werden. Sie haben sich schon auf eine Schnittstelle und
+die benötigen Operationen, die ein Datensatz unterstützen muss, geeinigt. Es
+gibt eine Klasse "DataSetInterface", die die Schnittstelle definiert und Opera-
+tionen jedes Datensatzes angibt. Bisher fehlt aber noch die Implementierung
+eines Datensatzes mit allen Operationen.\\[0.3cm]
+
+Implementieren Sie eine Klasse "DataSet"\ als eine Unterklasse von "DataSet-
+Interface".		
+\subsection{Aufbau}	
+Es gibt drei Dateien, "dataset.py", "main.py" und "implementation.py" $^*$. In der
+"dataset.py" befinden sich die Klassen "DataSetInterface" \ und "DataSetItem",
+in der Datei "\ implementation.py" muss die Klasse "DataSet" \ implementiert
+werden. Die Datei "main.py" nutzt die Klassen "DataSet"\ und "DataSetItem" \
+aus den jeweiligen Dateien und testet die Schnittstelle und Operationen von
+"DataSetInterface".	
+
+\subsection{Methoden}
+Bei der Klasse "DataSet" \ sind insbesondere folgenden Methoden zu implementieren, die genaue Spezifikation finden Sie in der "dataset.py":
+
+\begin{itemize}
+\item \_\_setitem\_\_(self, name, id\_content)
+	\begin{itemize}
+		\item[]	Hinzufügen eines Datums, mit Name, ID und Inhalt
+	\end{itemize}
+
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_iadd\_\_(self, item)
+	\begin{itemize}
+		\item[]	Hinzufügen eines "DataSetItem"
+	\end{itemize}
+	
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_delitem\_\_(self, name)
+	\begin{itemize}
+		\item[]	Löschen eines Datums auf Basis des Namens.
+		Das heißt auch, dass der Name eines Datums ein eindeutiger Schlüssel
+		ist und jeder Name nur einmal pro Datensatz vorkommen kann.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_contains\_\_(self, name)
+	\begin{itemize}
+		\item[] Prüfung, ob ein Datum mit diesem Namen im Datensatz vorhanden ist.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_and\_\_(self, dataset)
+	\begin{itemize}
+		\item[] Schnittmenge zweier Datensätze bestimmen und als einen neuen Datensatz zurückgeben.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_or\_\_(self, dataset)
+	\begin{itemize}
+		\item[] Vereinigungen zweier Datensätze bestimmen und als einen neuen Datensatz zurückgeben.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_iter\_\_(self)
+	\begin{itemize}
+		\item[] Iteration über alle Daten den Datensatzes (es ist möglich eine Sortierung
+		für die Reihenfolge der Iteration anzugeben).
+	\end{itemize}
+\end{itemize}
+
+
+\begin{itemize}
+	\item \_\_filtered\_iterate\_\_(self)
+	\begin{itemize}
+		\item[] Gefilterte Iteration über einen Datensatz, dabei dient eine Lambda-Funktion mit den Parametern Name und ID für jedes Datum als Filter.
+	\end{itemize}
+\end{itemize}
+
+\begin{itemize}
+	\item \_\_len\_\_(self)
+	\begin{itemize}
+		\item[] Anzahl der Daten in einem Datensatz abrufen.
+	\end{itemize}
+\end{itemize}
+
+\section{Abgabe}	
+Programmieren Sie die Klasse "DataSet"\ in der Datei "implementation.py"\ zur
+Lösung der oben beschrieben Aufgabe im VPL. Sie können auch direkt auf
+Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien
+zum Download im Moodle.\\[0.3cm]
+Das VPL nutzt den gleichen Code, wobei die "main.py"\ um weitere Test-
+fälle und Überprüfungen erweitert wurde. Die Überprüfungen dienen dazu
+sicherzustellen, dass Sie die richtigen Klassen nutzen.
+
+\end{document}
+

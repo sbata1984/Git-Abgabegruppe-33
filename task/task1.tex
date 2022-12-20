@@ -4,7 +4,9 @@
 
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[german]{todonotes}
 \usepackage{tikz}
+
 \usetikzlibrary{arrows, automata, positioning}
 \usetikzlibrary{positioning,shapes.geometric,calc}
 \usepackage[ngerman]{babel}
@@ -103,8 +105,9 @@ eines Datensatzes mit allen Operationen.\\[0.3cm]
 
 Implementieren Sie eine Klasse "DataSet"\ als eine Unterklasse von "DataSet-
 Interface".		
+\renewcommand\thefootnote{*}
 \subsection{Aufbau}	
-Es gibt drei Dateien, "dataset.py", "main.py" und "implementation.py" $^*$. In der
+Es gibt drei Dateien, "dataset.py", "main.py"\ und "\ implementation.py" \footnote{Dateien befinden sich im Ordner "/code/" dieses Git-Repositories.}. In der
 "dataset.py" befinden sich die Klassen "DataSetInterface" \ und "DataSetItem",
 in der Datei "\ implementation.py" muss die Klasse "DataSet" \ implementiert
 werden. Die Datei "main.py" nutzt die Klassen "DataSet"\ und "DataSetItem" \
@@ -184,7 +187,7 @@ Bei der Klasse "DataSet" \ sind insbesondere folgenden Methoden zu implementiere
 \end{itemize}
 
 \section{Abgabe}	
-Programmieren Sie die Klasse "DataSet"\ in der Datei "implementation.py"\ zur
+Programmieren Sie die Klasse "DataSet"\ in der Datei "\ implementation.py"\ zur
 Lösung der oben beschrieben Aufgabe im VPL. Sie können auch direkt auf
 Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien
 zum Download im Moodle.\\[0.3cm]

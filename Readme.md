@@ -1,7 +1,7 @@
 
 ## LaTeX-Unterlagen 
 
-
+<span style="color:blue">some *This is Blue italic.* text</span>
 
 "In diesem ```Repository``` befinden sich die LaTeX-Unterlagen zum Modul."
 

@@ -1,5 +1,8 @@
-
-<style>H1{color:Blue;}</style>
+<style>
+H1{color:Blue !important;}
+H2{color:DarkOrange !important;}
+p{color:Black !important;}
+</style>
 
 ## color LaTeX-Unterlagen 
 "In diesem ```Repository``` befinden sich die LaTeX-Unterlagen zum Modul."

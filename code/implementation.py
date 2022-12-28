@@ -3,6 +3,12 @@
 Hier eine Klasse DataSet implementieren.
 
 """	
+class DataSet(DataSetInterface):
+
+	def __init__(self,items):
+		super().__init(self)
+		self.items =items
+
 
 # Hier TODO
 =======
@@ -22,3 +28,5 @@ Alle drei Dateien liegen im gleichen Ordner.
 
 # TODO
 >>>>>>> origin/implementation_datei
+
+

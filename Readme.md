@@ -1,4 +1,7 @@
-## LaTeX-Unterlagen
+```diff
+- text in red
+## LaTeX-Unterlagen in red
+```
 
 
 "In diesem ```Repository``` befinden sich die LaTeX-Unterlagen zum Modul."

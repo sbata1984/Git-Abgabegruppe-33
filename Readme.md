@@ -1,5 +1,4 @@
 ```diff
-- text in red
 ## LaTeX-Unterlagen in red
 ```
 

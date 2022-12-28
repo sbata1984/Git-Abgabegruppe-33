@@ -1,6 +1,7 @@
 
-## LaTeX-Unterlagen 
+<style>H1{color:Blue;}</style>
 
+## color LaTeX-Unterlagen 
 "In diesem ```Repository``` befinden sich die LaTeX-Unterlagen zum Modul."
 
 ## Inhalt

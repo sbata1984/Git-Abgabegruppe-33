@@ -5,16 +5,11 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{todonotes}
-\usepackage{tikz}
-
-\usetikzlibrary{arrows, automata, positioning}
-\usetikzlibrary{positioning,shapes.geometric,calc}
 \usepackage[ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[breaklinks=true]{hyperref}
-\usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage[german=guillemets]{csquotes}
 \usepackage{amsmath}
@@ -25,44 +20,15 @@
 \usepackage{color}  
 \usepackage{cite}
 \usepackage{graphicx}
-\usepackage{graphicx}
-\graphicspath{ {./images/} }
 \usepackage{fancyhdr}
 \usepackage{subcaption}
 \usepackage{float}
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{definition}[theorem]{Definition}
 
-\tikzset{tp/.style = {
-		trapezium,
-		trapezium left angle = 70,
-		trapezium right angle = 110,
-		fill=white,
-		draw = black
-	}
-}
 
-\tikzset{
-	rc/.style = {
-		rectangle,
-		fill=white,
-		draw = black,
-		minimum width = 100pt,
-		minimum height = 20pt
-	}
-}
 
-\tikzset{
-	dm/.style = {
-		diamond,
-		fill=white,
-		draw = black
-	}
-}
-\title{Werkzeuge für das wissenschaftliche Arbeiten \\  {\large Python for Machine Learning and Data Science} } 
+\title{Werkzeuge für das wissenschaftliche Arbeiten \\[0.1cm]  {\large Python for Machine Learning and Data Science} } 
 
-\author{ {\large Hicham Harhar, Praderm Nafack Noumedem} }
+\author{ {\large Maamoun, } }
 
 \date{Abgabe: 23.12.2022}
 
@@ -86,7 +52,7 @@
 		\begin{minipage}{\linewidth}
 			\renewcommand{\footnoterule}{}
 			\begin{center}
-				\includegraphics[width=0.75\linewidth]{1.png}.
+				\includegraphics[width=0.77\linewidth]{bild.png}.
 			\end{center}
 			\caption[Darstellung der Klassenbeziehungen] {Darstellung der Klassenbeziehungen.}
 		\end{minipage}
@@ -94,14 +60,14 @@
 \subsection{Einleitung}
 Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein
 Objekt der Klasse "DataSetItem" repräsentiert. Jedes Datum hat einen Namen
-(Zeichenkette), eine ID (Zahl) und bel. Inhalt.\\[0.3cm]
+(Zeichenkette), eine ID (Zahl) und bel. Inhalt.\\[0.25cm]
 
 Nun sollen mehrere Daten, Objekte vom Typ "DataSetItem", in einem Daten-
 satz zusammengefasst werden. Sie haben sich schon auf eine Schnittstelle und
 die benötigen Operationen, die ein Datensatz unterstützen muss, geeinigt. Es
 gibt eine Klasse "DataSetInterface", die die Schnittstelle definiert und Opera-
 tionen jedes Datensatzes angibt. Bisher fehlt aber noch die Implementierung
-eines Datensatzes mit allen Operationen.\\[0.3cm]
+eines Datensatzes mit allen Operationen.\\[0.25cm]
 
 Implementieren Sie eine Klasse "DataSet"\ als eine Unterklasse von "DataSet-
 Interface".		
@@ -190,7 +156,7 @@ Bei der Klasse "DataSet" \ sind insbesondere folgenden Methoden zu implementiere
 Programmieren Sie die Klasse "DataSet"\ in der Datei "\ implementation.py"\ zur
 Lösung der oben beschrieben Aufgabe im VPL. Sie können auch direkt auf
 Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien
-zum Download im Moodle.\\[0.3cm]
+zum Download im Moodle.\\[0.25cm]
 Das VPL nutzt den gleichen Code, wobei die "main.py"\ um weitere Test-
 fälle und Überprüfungen erweitert wurde. Die Überprüfungen dienen dazu
 sicherzustellen, dass Sie die richtigen Klassen nutzen.

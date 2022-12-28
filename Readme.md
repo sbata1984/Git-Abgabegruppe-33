@@ -4,7 +4,7 @@ H2{color:DarkOrange !important;}
 p{color:Black !important;}
 </style>
 
-## color LaTeX-Unterlagen 
+## Color LaTeX-Unterlagen 
 "In diesem ```Repository``` befinden sich die LaTeX-Unterlagen zum Modul."
 
 ## Inhalt
